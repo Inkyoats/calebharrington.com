@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Caleb Harrington</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!--
+  <link rel="stylesheet" href="css/skeleton.css">
+  -->
+
+  <script src="js/jquery_tarot.js"></script>
+  <script src="js/jquery.lazy.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <script src="js/pixi.js"></script>
+  <script src="js/tarot.js"></script>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+          <div class="pure-menu-heading" >
+            <div id='con_top_menu'>
+              <img id='img_menu_skull' class='pure-img-responsive fader' data-src="images/floral-skull-linvert_s.jpg" alt='Caleb Harrington'>
+            </div>
+          </div>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="../index" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="../gallery" class="pure-menu-link">Gallery</a></li>
+                <!-- <li class="pure-menu-item"><a href="../gallery_more" class="pure-menu-link">More Gallery</a></li> -->
+                <li class="pure-menu-item"><a href="../experiments" class="pure-menu-link">Experiments</a></li>
+                  <li class="pure-menu-item"><a href="experiments/tarot" class="pure-menu-link"> &nbsp; &nbsp; Tarot</a></li>
+                <li class="pure-menu-item"><a href="../about" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="../download" class="pure-menu-link">Downloads</a></li>
+
+            </ul>
+
+            <ul class='pure-menu-list'>
+              <li class="pure-menu-item"> &nbsp; </li>
+              <li class="pure-menu-item"> &nbsp; Content </li>
+              <li class="pure-menu-item"> &nbsp; licensed </li>
+              <li class="pure-menu-item"> <a href='https://creativecommons.org/licenses/by-sa/3.0/us/' alt='CC-BY-SA'>CC-BY-SA</a></li>
+              <li class="pure-menu-item"> &nbsp; </li>
+              <li class="pure-menu-item"> &nbsp; <img src='assets/by-sa.svg'></img> </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+
+          <div class='pure-g'>
+
+            <div class='pure-u-1-3'></div>
+
+            <div class='pure-u-1-3'>
+              <h1>
+                  <img id='img_header_banner' class="pure-img-responsive fader" src='images/white_1007x640.jpg' data-src="images/caleb-harrington-com.jpg" alt="Caleb Harrington dot com">
+              </h1>
+            </div>
+
+            <div class='pure-u-1-3'></div>
+          </div>
+        </div>
+
+        <div class="content">
+
+
+  <div class='container' style='touch-action:manipulation;'>
+
+    <br>
+
+    <!--
+    <div class='row'>
+      <div  style='text-align:center;'><h1> howdy </h1></div>
+    </div>
+    <hr>
+    -->
+
+    <div class='row'>
+      <div style='text-align:center;'>
+        <!-- <button id='ui_random'>randomize</button> -->
+        <button class='pure-button' id='ui_random'>randomize</button>
+      </div>
+    </div>
+
+    <br>
+
+    <div class='row' style='text-align:center;'>
+      <div id='ui_canvas'></div>
+    </div>
+
+    <br>
+
+
+    <div class='pure-g'>
+
+      <div class='pure-u-1-6'> </div>
+      <div class='pure-u-1-6'> </div>
+
+      <div class='pure-u-1-3'>
+        <div style='text-align:center;'>
+          <b>
+            <div id='ui_tarot_text' >
+              ...
+            </div>
+          </b>
+        </div>
+      </div>
+
+      <div class='pure-u-1-6'> </div>
+      <div class='pure-u-1-6'>
+        <a id='ui_download_x' href='#' download>
+          <img class='tarot_icon' src='images/noun-download-4475160.svg'>
+        </a>
+      </div>
+
+    </div>
+
+
+    <br>
+
+    <div>
+
+      <div class='row'>
+        <div id='ui_slider_head' ></div>
+      </div>
+
+      <br>
+
+      <div class='row'>
+        <div id='ui_slider_chest' ></div>
+      </div>
+
+      <br>
+
+      <div class='row'>
+        <div id='ui_slider_arm' ></div>
+      </div>
+
+      <br>
+
+      <div class='row'>
+        <div id='ui_slider_leg' ></div>
+      </div>
+
+      <br>
+
+      <div class='row'>
+        <div id='ui_slider_feet' ></div>
+      </div>
+
+    </div>
+
+    <div id='ui_slider_test' ></div>
+    <br>
+
+  </div>
+
+  <br>
+  <br>
+
+
+  <div class='pure-g'>
+
+    <div class='pure-u-1-3'>
+    </div>
+
+    <div class='pure-u-1-3' style='text-align:center;'>
+      <a 
+        href='https://twitter.com/intent/tweet?text=Caleb+Harrington%27s+generative+tarot&url=https%3A%2F%2Fwww.calebharrington.com%2Fexperiments%2Ftarot'
+        id='ui_twitter'>
+        <img src='images/Twitter_bird_logo_2012.svg' class='tarot_twitter_icon' ></img>
+      </a>
+    </div>
+
+    <div class='pure-u-1-3'>
+    </div>
+
+  </div>
+
+  <br>
+
+  <hr>
+
+  <br>
+
+  <div class='pure-g'>
+
+    <div class='pure-u-1-6'>
+    </div>
+
+    <div class='pure-u-2-3' style='text-align:center;'>
+      <div id='ui_history'>
+      </div>
+    </div>
+
+    <div class='pure-u-1-6'>
+    </div>
+
+  </div>
+
+
+  <br>
+
+  <hr>
+
+  <br>
+  <br>
+
+  <div style='text-align:center;'>
+    <h3>PDF File</h3>
+
+    <p>
+      <a href='assets/tarot_deck.pdf' download>
+        <img style='width:15%;'
+             id='id_download'
+             class="pure-img-responsive fader"
+             src='images/noun_download_zip_632104.svg'
+             data-src="assets/noun_download_zip_632104.svg"
+             alt="tarot_deck.pdf">
+      </a>
+    </p>
+
+  </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+  <script src="js/ui.js"></script>
+  <script>
+    $(function() {
+      //$('#img_menu_skull').Lazy({ effect: 'fadeIn' });
+      //$('#img_header_banner').Lazy({ effect: 'fadeIn' });
+      $(".fader").Lazy({ effect: 'fadeIn' });
+      init();
+    });
+  </script>
+
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+</body>
+</html>
