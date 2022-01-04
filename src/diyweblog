@@ -1,0 +1,33 @@
+#!/bin/bash
+
+fn="/var/log/apache2/access.log"
+
+if [[ "$1" != "" ]] ; then
+  fn="$1"
+fi
+
+zgrep -v -P 'petalbot|ahrefs\.com/robot|opensiteexplorer\.org/dotbot|bing\.com/bingbot|Sogou web spider|yandex\.com/bots|semrush\.com/bot|google\.com/bot' $fn | \
+  grep ' 200 ' | \
+  awk '{ print $1, $6, $7 }' | \
+  cut -f1,2 -d'/' | \
+  awk '{ print $1, $3 }' | \
+  sort | uniq -c | sort -n
+
+echo "-----"
+
+zgrep -v -P 'petalbot|ahrefs\.com/robot|opensiteexplorer\.org/dotbot|bing\.com/bingbot|Sogou web spider|yandex\.com/bots|semrush\.com/bot|google\.com/bot' $fn | \
+  grep ' 200 ' | \
+  awk '{ print $1, $6, $7 }' | \
+  cut -f1,2 -d'/' | \
+  awk '{ print $1, $3 }' | \
+  sort -u | \
+  awk '{ print $2 }' | \
+  sort | uniq -c | sort -n
+
+echo "------"
+
+zgrep -v -P 'petalbot|ahrefs\.com/robot|opensiteexplorer\.org/dotbot|bing\.com/bingbot|Sogou web spider|yandex\.com/bots|semrush\.com/bot|google\.com/bot' $fn | \
+  grep ' 200 ' | \
+  cut -f1 -d' ' | \
+  sort -u | wc
+
