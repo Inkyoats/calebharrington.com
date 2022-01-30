@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Caleb Harrington</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="css/styles.css">
+ 
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.lazy.js"></script>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/custom.css">
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+          <div class="pure-menu-heading" >
+            <div id='con_top_menu'>
+              <img id='img_menu_skull' class='pure-img-responsive fader' data-src="images/floral-skull-linvert_s.jpg" alt='Caleb Harrington'>
+            </div>
+          </div>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="index" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="gallery" class="pure-menu-link">Gallery</a></li>
+                <!-- <li class="pure-menu-item"><a href="gallery_more" class="pure-menu-link">More Gallery</a></li> -->
+                <li class="pure-menu-item"><a href="experiments" class="pure-menu-link">Experiments</a></li>
+                <li class="pure-menu-item"><a href="about" class="pure-menu-link pure-menu-selected">About</a></li>
+                <li class="pure-menu-item"><a href="download" class="pure-menu-link">Downloads</a></li>
+
+            </ul>
+
+            <ul class='pure-menu-list'>
+              <li class="pure-menu-item"> &nbsp; </li>
+              <li class="pure-menu-item"> &nbsp; Content </li>
+              <li class="pure-menu-item"> &nbsp; licensed </li>
+              <li class="pure-menu-item"> <a href='https://creativecommons.org/licenses/by-sa/3.0/us/' alt='CC-BY-SA'>CC-BY-SA</a></li>
+              <li class="pure-menu-item"> &nbsp; </li>
+              <li class="pure-menu-item"> &nbsp; <img src='assets/by-sa.svg'></img> </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+
+          <div class='pure-g'>
+
+            <div class='pure-u-1-3'></div>
+
+            <div class='pure-u-1-3'>
+              <h1>
+                  <img id='img_header_banner' class="pure-img-responsive fader" src='images/white_1007x640.jpg' data-src="images/caleb-harrington-com.jpg" alt="Caleb Harrington dot com">
+              </h1>
+            </div>
+
+            <div class='pure-u-1-3'></div>
+          </div>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead">About/Contact</h2>
+            <p>
+            CALEB HARRINGTON is a WILD ANIMAL residing deep in the woodlands of UPSTATE NY. HE is an ILLUSTRATOR a DARK WIZARD and possibly a SPACE COWBOY.
+            </p>
+
+            <!--
+              just doing some peasent encryption to try and foil bots from grabbing email and/or number
+              'unmunge' below strikes out every other character, keeping the first, third, etc.
+            -->
+            <p>
+            YOU can CONTACT him via MESSENGER PIGEON or EMAIL <span id='munge_email'>(bilnZk2y0.Jo0autQsC@3yUaahtofoK.0cJopmk)v</span> <span id='munge_phone'>1j(g6A0I7m)H438q35 d338X1A3s</span>
+            </p>
+
+            <h2 class='content-subhead'>License and Reuse</h2>
+
+            <p>
+            All art is copyright Caleb Harrington and is available under a Creative Commons, By Attribution, Share-Alike (<a href='https://creativecommons.org/licenses/by-sa/3.0/us/'>CC-BY-SA 3.0</a>).
+            </p>
+
+            <p>
+            This means you are free to download, use, reproduce, alter and resell, even for commercial purposes, so long as you credit the original creator
+            and provide the derived artwork under the same license (CC-BY-SA 3.0 or later).
+            </p>
+
+            <h2 class="content-subhead"></h2>
+            <div class='pure-g'>
+              <div class='pure-u-1-3'>
+              </div>
+
+              <div class='pure-u-1-3'>
+                <a href='https://caleb--harrington-blog.tumblr.com/'><img class="pure-img-responsive" style='opacity:0.8;' src="img/tumblr.png" alt="caleb--harrington-blog.tumblr.com"></a>
+
+
+              </div>
+
+              <div class='pure-u-1-3'>
+              </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/munge.js"></script>
+  <script>
+    unmunge("munge_email");
+    unmunge("munge_phone");
+    $(function() {
+      //$('#img_menu_skull').Lazy({ effect: 'fadeIn' });
+      //$('#img_header_banner').Lazy({ effect: 'fadeIn' });
+      $(".fader").Lazy({ effect: 'fadeIn' });
+    });
+  </script>
+
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+</body>
+</html>

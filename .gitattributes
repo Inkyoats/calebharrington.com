@@ -1,0 +1,4 @@
+html/img.0 filter=lfs diff=lfs merge=lfs -text
+html/img.0.small/ filter=lfs diff=lfs merge=lfs -text
+html/pic filter=lfs diff=lfs merge=lfs -text
+html/picsmall/ filter=lfs diff=lfs merge=lfs -text
